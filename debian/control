@@ -17,7 +17,6 @@ Depends:
   console-setup,
   debconf,
   debconf-i18n,
-  dhcpcd-base,
   e2fsprogs,
   eject,
   init,
@@ -47,6 +46,7 @@ Depends:
   vim-tiny,
   whiptail
 Recommends:
+  dhcpcd-base,
   rsyslog,
   usrmerge
 Description: Minimal core of Regolith Linux
