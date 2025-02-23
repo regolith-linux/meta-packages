@@ -208,7 +208,7 @@ Depends:
   i3xrocks-rofication,
   i3xrocks-time,
   i3xrocks-volume,
-Recommendeds:
+Recommends:
   regolith-wm-next-workspace
 Description: Completele desktop of Regolith Linux based on
   I3 and X11
@@ -222,7 +222,7 @@ Depends:
   regolith-look-lascaille,
   plymouth-theme-regolith,
   plymouth-theme-regolith-logo,
-Recommendeds:
+Recommends:
   regolith-sway-touchpad-gestures,
   regolith-wm-next-workspace
 Description: Completele desktop of Regolith Linux based on
