@@ -198,7 +198,6 @@ Package: regolith-desktop-i3
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-desktop,
   regolith-session-flashback,
   regolith-look-lascaille,
   plymouth-theme-regolith-logo,
@@ -220,7 +219,6 @@ Package: regolith-desktop-sway
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-desktop,
   regolith-session-sway,
   regolith-look-lascaille,
   plymouth-theme-regolith-logo,
