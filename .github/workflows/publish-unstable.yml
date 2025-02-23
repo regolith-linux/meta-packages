@@ -3,7 +3,9 @@ name: Publish to Unstable
 on:
   workflow_dispatch:
   push:
-    branches:
+    # branches:
+    #   - main
+    branches-ignore:
       - main
 
 concurrency:
@@ -20,9 +22,11 @@ jobs:
       - name: Build Matrix
         id: builder
         uses: regolith-linux/actions/build-matrix@main
+        env:
+          VOULAGE_REF: "meta-packages"
         with:
           name: "${{ github.event.repository.name }}"
-          ref: "${{ github.ref_name }}"
+          ref: "main"
           arch: "amd64 arm64"
           stage: "unstable"
 
@@ -49,6 +53,8 @@ jobs:
       - name: Build Package
         id: build
         uses: regolith-linux/actions/build-package@main
+        env:
+          VOULAGE_REF: "meta-packages"
         with:
           name: "${{ github.event.repository.name }}"
           distro: "${{ matrix.distro }}"
@@ -125,21 +131,21 @@ jobs:
           packages-path-subfolder: "${{ github.event.repository.name }}"
           only-component: "unstable"
 
-  manifests:
-    runs-on: ubuntu-24.04
-    needs: [matrix-builder, publish]
-    container: "ghcr.io/regolith-linux/ci-ubuntu:noble-amd64"
-    if: ${{ !failure() && !cancelled() }}
-    steps:
-      - name: Update Manifests
-        uses: regolith-linux/actions/update-manifest@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.ORG_BROADCAST_TOKEN2 }}
-        with:
-          name: "${{ github.event.repository.name }}"
-          repo: "${{ github.server_url }}/${{ github.repository }}.git"
-          ref: "${{ github.ref_name }}"
-          sha: "${{ github.sha }}"
-          matrix: "${{ needs.matrix-builder.outputs.includes }}"
-          suite: "unstable"
-          component: "main"
+  # manifests:
+  #   runs-on: ubuntu-24.04
+  #   needs: [matrix-builder, publish]
+  #   container: "ghcr.io/regolith-linux/ci-ubuntu:noble-amd64"
+  #   if: ${{ !failure() && !cancelled() }}
+  #   steps:
+  #     - name: Update Manifests
+  #       uses: regolith-linux/actions/update-manifest@main
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.ORG_BROADCAST_TOKEN2 }}
+  #       with:
+  #         name: "${{ github.event.repository.name }}"
+  #         repo: "${{ github.server_url }}/${{ github.repository }}.git"
+  #         ref: "main"
+  #         sha: "${{ github.sha }}"
+  #         matrix: "${{ needs.matrix-builder.outputs.includes }}"
+  #         suite: "unstable"
+  #         component: "main"
