@@ -141,7 +141,6 @@ Depends:
   ssl-cert,
   thermald,
   unzip,
-  wireless-tools,
   wpasupplicant,
   xdg-user-dirs,
   xdg-user-dirs-gtk,
