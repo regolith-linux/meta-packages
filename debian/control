@@ -1,0 +1,233 @@
+Source: meta-packages
+Section: x11
+Priority: optional
+Maintainer: Khosrow Moossavi <khos2ow@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/regolith-linux/meta-packages
+Vcs-Git: https://github.com/regolith-linux/meta-packages.git
+
+Package: regolith-minimal
+Architecture: any
+Depends:
+  adduser,
+  apt,
+  apt-utils,
+  base-files,
+  console-setup,
+  debconf,
+  debconf-i18n,
+  dhcpcd-base,
+  e2fsprogs,
+  eject,
+  init,
+  iproute2,
+  iputils-ping,
+  isc-dhcp-client,
+  kbd,
+  kmod,
+  less,
+  locales,
+  lsb-release,
+  mawk,
+  mount,
+  netbase,
+  netcat-openbsd,
+  netplan.io,
+  passwd,
+  procps,
+  python3,
+  sensible-utils,
+  sudo,
+  syslinux,
+  syslinux-common,
+  tzdata,
+  ubuntu-keyring,
+  udev,
+  vim-tiny,
+  whiptail
+Recommends:
+  rsyslog,
+  usrmerge
+Description: Minimal core of Regolith Linux
+
+Package: regolith-standard
+Architecture: any
+Depends:
+  apt-transport-https,
+  bind9-dnsutils,
+  busybox-static,
+  cpio,
+  cron,
+  curl,
+  dmidecode,
+  dosfstools,
+  ed,
+  file,
+  ftp,
+  hdparm,
+  info,
+  language-selector-common,
+  libpam-systemd,
+  logrotate,
+  lshw,
+  lsof,
+  man-db,
+  media-types,
+  nftables,
+  parted,
+  pciutils,
+  psmisc,
+  rsync,
+  strace,
+  time,
+  usbutils,
+  wget,
+  xz-utils
+Recommends:
+  apparmor,
+  bash-completion,
+  command-not-found,
+  cryptsetup,
+  elementary-os-overlay,
+  friendly-recovery,
+  iptables,
+  iputils-tracepath,
+  irqbalance,
+  jfsutils,
+  lvm2,
+  manpages,
+  mtr-tiny,
+  nano,
+  ntfs-3g,
+  openssh-client,
+  plymouth,
+  tcpdump,
+  telnet,
+  ufw,
+  uuid-runtime
+Description: CLI-only components of Regolith Linux
+
+Package: regolith-desktop-common
+Architecture: any
+Depends:
+  acpid,
+  alsa-base,
+  alsa-utils,
+  anacron,
+  at-spi2-core,
+  bc,
+  ca-certificates,
+  dmz-cursor-theme,
+  eog,
+  file-roller,
+  fontconfig,
+  foomatic-db-compressed-ppds,
+  ghostscript,
+  gnome-font-viewer,
+  gnome-menus,
+  gnome-screenshot,
+  libnotify-bin,
+  libsasl2-modules,
+  nautilus,
+  openprinting-ppds,
+  regolith-default-settings,
+  rfkill
+  ssl-cert,
+  thermald,
+  unzip,
+  wireless-tools,
+  wpasupplicant,
+  xdg-user-dirs,
+  xdg-user-dirs-gtk,
+  xkb-data,
+  xcursor-themes,
+  xorg,
+  zip
+Recommends:
+  avahi-autoipd,
+  avahi-daemon,
+  bluez,
+  bluez-cups,
+  brltty,
+  cups,
+  cups-bsd,
+  cups-client,
+  cups-filters,
+  fwupd,
+  fwupd-signed,
+  geoclue-2.0,
+  gnome-power-manager,
+  gnome-session-bin,
+  heif-gdk-pixbuf,
+  heif-thumbnailer,
+  hplip,
+  htop,
+  ibus,
+  im-config,
+  kerneloops,
+  language-pack-en,
+  language-pack-gnome-en,
+  laptop-detect,
+  libgail-common,
+  libnss-mdns,
+  libpam-gnome-keyring,
+  network-manager,
+  network-manager-pptp-gnome,
+  network-manager-openvpn,
+  network-manager-openvpn-gnome,
+  orca,
+  packagekit,
+  pcmciautils,
+  policykit-desktop-privileges,
+  speech-dispatcher,
+  wamerican,
+  xdg-utils
+Description: Common desktop packages of Regolith Linux
+
+Package: regolith-desktop-i3
+Architecture: any
+Depends:
+  regolith-desktop,
+  regolith-session-flashback,
+  regolith-look-lascaille,
+  plymouth-theme-regolith,
+  plymouth-theme-regolith-logo,
+  i3xrocks-app-launcher,
+  i3xrocks-battery,
+  i3xrocks-bluetooth,
+  i3xrocks-focused-window-name,
+  i3xrocks-info,
+  i3xrocks-memory,
+  i3xrocks-net-traffic,
+  i3xrocks-next-workspace,
+  i3xrocks-rofication,
+  i3xrocks-time,
+  i3xrocks-volume,
+Recommendeds:
+  regolith-wm-next-workspace
+Description: Completele desktop of Regolith Linux based on
+  I3 and X11
+
+Package: regolith-desktop-sway
+Architecture: any
+Depends:
+  regolith-desktop,
+  regolith-session-sway,
+  regolith-look-lascaille,
+  plymouth-theme-regolith,
+  plymouth-theme-regolith-logo,
+Recommendeds:
+  regolith-sway-touchpad-gestures,
+  regolith-wm-next-workspace
+Description: Completele desktop of Regolith Linux based on
+  Wayland and Sway
+
+# Package: regolith-live
+# Architecture: any
+# Depends:
+#   ${shlibs:Depends},
+#   ${misc:Depends},
+#   libjsonrpc-glib-1.0-dev
+# Description: Regolith Linux Live Configurations
+
