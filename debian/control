@@ -199,7 +199,6 @@ Depends:
   regolith-desktop,
   regolith-session-flashback,
   regolith-look-lascaille,
-  plymouth-theme-regolith,
   plymouth-theme-regolith-logo,
   i3xrocks-app-launcher,
   i3xrocks-battery,
@@ -212,8 +211,6 @@ Depends:
   i3xrocks-rofication,
   i3xrocks-time,
   i3xrocks-volume,
-Recommends:
-  regolith-wm-next-workspace
 Description: Complete Regolith Desktop (i3 and X11)
  This metapackage installs the complete Regolith Linux desktop with i3 and X11.
 
@@ -224,11 +221,9 @@ Depends:
   regolith-desktop,
   regolith-session-sway,
   regolith-look-lascaille,
-  plymouth-theme-regolith,
   plymouth-theme-regolith-logo,
 Recommends:
-  regolith-sway-touchpad-gestures,
-  regolith-wm-next-workspace
+  regolith-sway-touchpad-gestures
 Description: Complete Regolith Desktop (Sway and Wayland)
  This metapackage installs the complete Regolith Linux desktop with Sway and
  Wayland.
