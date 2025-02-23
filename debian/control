@@ -10,6 +10,7 @@ Vcs-Git: https://github.com/regolith-linux/meta-packages.git
 Package: regolith-minimal
 Architecture: any
 Depends:
+  ${misc:Depends},
   adduser,
   apt,
   apt-utils,
@@ -54,6 +55,7 @@ Description: Minimal core of Regolith Linux
 Package: regolith-standard
 Architecture: any
 Depends:
+  ${misc:Depends},
   apt-transport-https,
   bind9-dnsutils,
   busybox-static,
@@ -111,6 +113,7 @@ Description: CLI-only components of Regolith Linux
 Package: regolith-desktop-common
 Architecture: any
 Depends:
+  ${misc:Depends},
   acpid,
   alsa-base,
   alsa-utils,
@@ -132,7 +135,7 @@ Depends:
   nautilus,
   openprinting-ppds,
   regolith-default-settings,
-  rfkill
+  rfkill,
   ssl-cert,
   thermald,
   unzip,
@@ -188,6 +191,7 @@ Description: Common desktop packages of Regolith Linux
 Package: regolith-desktop-i3
 Architecture: any
 Depends:
+  ${misc:Depends},
   regolith-desktop,
   regolith-session-flashback,
   regolith-look-lascaille,
@@ -212,6 +216,7 @@ Description: Completele desktop of Regolith Linux based on
 Package: regolith-desktop-sway
 Architecture: any
 Depends:
+  ${misc:Depends},
   regolith-desktop,
   regolith-session-sway,
   regolith-look-lascaille,
@@ -230,4 +235,3 @@ Description: Completele desktop of Regolith Linux based on
 #   ${misc:Depends},
 #   libjsonrpc-glib-1.0-dev
 # Description: Regolith Linux Live Configurations
-
