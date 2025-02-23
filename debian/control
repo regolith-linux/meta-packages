@@ -133,7 +133,7 @@ Depends:
   gnome-screenshot,
   libnotify-bin,
   libsasl2-modules,
-  regolith-lightdm-config
+  regolith-lightdm-config,
   nautilus,
   openprinting-ppds,
   regolith-default-settings,
