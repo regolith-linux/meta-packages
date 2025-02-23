@@ -1,1 +1,5 @@
-meta-packages (0.0.0) UNRELEASED; urgency=medium
+meta-packages (0.1.0) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
+  [ Khosrow Moossavi ]
+  * fix: d/control
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 23 Feb 2025 04:01:48 +0000
