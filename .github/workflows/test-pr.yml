@@ -17,6 +17,8 @@ jobs:
       - name: Build Matrix
         id: builder
         uses: regolith-linux/actions/build-matrix@main
+        env:
+          VOULAGE_REF: "meta-packages"
         with:
           name: "${{ github.event.repository.name }}"
           ref: "${{ github.base_ref }}" # build for target branch of the pull request
@@ -37,6 +39,8 @@ jobs:
 
       - name: Build Package
         uses: regolith-linux/actions/build-package@main
+        env:
+          VOULAGE_REF: "meta-packages"
         with:
           only-build: "true"
           name: "${{ github.event.repository.name }}"
