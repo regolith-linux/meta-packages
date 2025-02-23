@@ -80,6 +80,7 @@ Depends:
   pciutils,
   psmisc,
   rsync,
+  software-properties-common,
   strace,
   time,
   usbutils,
