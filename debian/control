@@ -56,7 +56,6 @@ Package: regolith-standard
 Architecture: any
 Depends:
   ${misc:Depends},
-  apt-transport-https,
   bind9-dnsutils,
   busybox-static,
   cpio,
