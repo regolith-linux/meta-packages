@@ -51,6 +51,7 @@ Recommends:
   rsyslog,
   usrmerge
 Description: Minimal core of Regolith Linux
+ This metapackage depends on all the packages in the Regolith minimal system.
 
 Package: regolith-standard
 Architecture: any
@@ -109,6 +110,7 @@ Recommends:
   ufw,
   uuid-runtime
 Description: CLI-only components of Regolith Linux
+ This metapackage depends on most of non-GUI packages from Regolith Linux.
 
 Package: regolith-desktop-common
 Architecture: any
@@ -187,12 +189,16 @@ Recommends:
   wamerican,
   xdg-utils
 Description: Common desktop packages of Regolith Linux
+ This metapackage specifies the package from which the Regolith desktop
+ common packages can be installed. These packages will be good addition
+ to regolith-desktop variations (i3, or sway) and can be shared between
+ the two variations.
 
 Package: regolith-desktop-i3
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-desktop,
+  # regolith-desktop,
   regolith-session-flashback,
   regolith-look-lascaille,
   plymouth-theme-regolith,
@@ -210,14 +216,14 @@ Depends:
   i3xrocks-volume,
 Recommends:
   regolith-wm-next-workspace
-Description: Completele desktop of Regolith Linux based on
-  I3 and X11
+Description: Complete Regolith Desktop (i3 and X11)
+ This metapackage installs the complete Regolith Linux desktop with i3 and X11.
 
 Package: regolith-desktop-sway
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-desktop,
+  # regolith-desktop,
   regolith-session-sway,
   regolith-look-lascaille,
   plymouth-theme-regolith,
@@ -225,8 +231,8 @@ Depends:
 Recommends:
   regolith-sway-touchpad-gestures,
   regolith-wm-next-workspace
-Description: Completele desktop of Regolith Linux based on
-  Wayland and Sway
+Description: Complete Regolith Desktop (Sway and Wayland)
+ This metapackage installs the complete Regolith Linux desktop with Sway and Wayland.
 
 # Package: regolith-live
 # Architecture: any
