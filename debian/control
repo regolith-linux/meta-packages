@@ -14,7 +14,6 @@ Depends:
   adduser,
   apt,
   apt-utils,
-  base-files,
   console-setup,
   debconf,
   debconf-i18n,
@@ -232,7 +231,8 @@ Recommends:
   regolith-sway-touchpad-gestures,
   regolith-wm-next-workspace
 Description: Complete Regolith Desktop (Sway and Wayland)
- This metapackage installs the complete Regolith Linux desktop with Sway and Wayland.
+ This metapackage installs the complete Regolith Linux desktop with Sway and
+ Wayland.
 
 # Package: regolith-live
 # Architecture: any
