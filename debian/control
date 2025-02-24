@@ -134,6 +134,8 @@ Depends:
   gnome-screenshot,
   libnotify-bin,
   libsasl2-modules,
+  lightdm,
+  lightdm-settings,
   regolith-lightdm-config,
   nautilus,
   openprinting-ppds,
