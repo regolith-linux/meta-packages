@@ -7,6 +7,13 @@ Standards-Version: 4.1.2
 Homepage: https://github.com/regolith-linux/meta-packages
 Vcs-Git: https://github.com/regolith-linux/meta-packages.git
 
+Package: regolith-branding
+Architecture: any
+Depends:
+  ${misc:Depends},
+Description: Regolith Linux branding materials
+ TODO.
+
 Package: regolith-minimal
 Architecture: any
 Depends:
@@ -70,7 +77,7 @@ Depends:
   ftp,
   hdparm,
   info,
-  language-selector-common,
+#  language-selector-common,
   libpam-systemd,
   logrotate,
   lshw,
@@ -82,7 +89,7 @@ Depends:
   pciutils,
   psmisc,
   rsync,
-  software-properties-common,
+#  software-properties-common,
   strace,
   time,
   usbutils,
@@ -93,8 +100,7 @@ Recommends:
   bash-completion,
   command-not-found,
   cryptsetup,
-  elementary-os-overlay,
-  friendly-recovery,
+#  friendly-recovery,
   iptables,
   iputils-tracepath,
   irqbalance,
@@ -118,8 +124,8 @@ Architecture: any
 Depends:
   ${misc:Depends},
   acpid,
-  alsa-base,
-  alsa-utils,
+#  alsa-base,
+#  alsa-utils,
   anacron,
   at-spi2-core,
   bc,
@@ -173,9 +179,9 @@ Recommends:
   htop,
   ibus,
   im-config,
-  kerneloops,
-  language-pack-en,
-  language-pack-gnome-en,
+#  kerneloops,
+#  language-pack-en,
+#  language-pack-gnome-en,
   laptop-detect,
   libgail-common,
   libnss-mdns,
@@ -187,7 +193,7 @@ Recommends:
   orca,
   packagekit,
   pcmciautils,
-  policykit-desktop-privileges,
+#  policykit-desktop-privileges,
   speech-dispatcher,
   wamerican,
   xdg-utils
