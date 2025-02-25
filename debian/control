@@ -43,7 +43,7 @@ Depends:
   tzdata,
   ubuntu-keyring,
   udev,
-  vim-tiny,
+  vim,
   whiptail
 Recommends:
   dhcpcd-base,
@@ -51,6 +51,8 @@ Recommends:
   usrmerge
 Description: Minimal core of Regolith Linux
  This metapackage depends on all the packages in the Regolith minimal system.
+
+##shim-signed
 
 Package: regolith-standard
 Architecture: any
@@ -125,7 +127,6 @@ Depends:
   dmz-cursor-theme,
   eog,
   file-roller,
-  firefox,
   fontconfig,
   foomatic-db-compressed-ppds,
   ghostscript,
