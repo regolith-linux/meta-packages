@@ -7,12 +7,12 @@ Standards-Version: 4.1.2
 Homepage: https://github.com/regolith-linux/meta-packages
 Vcs-Git: https://github.com/regolith-linux/meta-packages.git
 
-Package: regolith-branding
-Architecture: any
-Depends:
-  ${misc:Depends},
-Description: Regolith Linux branding materials
- TODO.
+#Package: regolith-branding
+#Architecture: any
+#Depends:
+#  ${misc:Depends},
+#Description: Regolith Linux branding materials
+# TODO.
 
 Package: regolith-minimal
 Architecture: any
@@ -48,7 +48,6 @@ Depends:
   syslinux,
   syslinux-common,
   tzdata,
-#  ubuntu-keyring,
   udev,
   vim,
   whiptail
@@ -77,7 +76,6 @@ Depends:
   ftp,
   hdparm,
   info,
-#  language-selector-common,
   libpam-systemd,
   logrotate,
   lshw,
@@ -89,7 +87,6 @@ Depends:
   pciutils,
   psmisc,
   rsync,
-#  software-properties-common,
   strace,
   time,
   usbutils,
@@ -100,7 +97,6 @@ Recommends:
   bash-completion,
   command-not-found,
   cryptsetup,
-#  friendly-recovery,
   iptables,
   iputils-tracepath,
   irqbalance,
@@ -124,8 +120,6 @@ Architecture: any
 Depends:
   ${misc:Depends},
   acpid,
-#  alsa-base,
-#  alsa-utils,
   anacron,
   at-spi2-core,
   bc,
@@ -133,6 +127,7 @@ Depends:
   dmz-cursor-theme,
   eog,
   file-roller,
+  firefox,
   fontconfig,
   foomatic-db-compressed-ppds,
   ghostscript,
@@ -179,9 +174,6 @@ Recommends:
   htop,
   ibus,
   im-config,
-#  kerneloops,
-#  language-pack-en,
-#  language-pack-gnome-en,
   laptop-detect,
   libgail-common,
   libnss-mdns,
@@ -193,7 +185,6 @@ Recommends:
   orca,
   packagekit,
   pcmciautils,
-#  policykit-desktop-privileges,
   speech-dispatcher,
   wamerican,
   xdg-utils
@@ -207,7 +198,6 @@ Package: regolith-desktop-i3
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-desktop,
   regolith-session-flashback,
   regolith-look-lascaille,
   plymouth-theme-regolith-logo,
@@ -229,7 +219,6 @@ Package: regolith-desktop-sway
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-desktop,
   regolith-session-sway,
   regolith-look-lascaille,
   plymouth-theme-regolith-logo,
