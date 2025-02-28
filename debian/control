@@ -1,0 +1,237 @@
+Source: meta-packages
+Section: x11
+Priority: optional
+Maintainer: Khosrow Moossavi <khos2ow@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/regolith-linux/meta-packages
+Vcs-Git: https://github.com/regolith-linux/meta-packages.git
+
+#Package: regolith-branding
+#Architecture: any
+#Depends:
+#  ${misc:Depends},
+#Description: Regolith Linux branding materials
+# TODO.
+
+Package: regolith-minimal
+Architecture: any
+Depends:
+  ${misc:Depends},
+  adduser,
+  apt,
+  apt-utils,
+  console-setup,
+  debconf,
+  debconf-i18n,
+  e2fsprogs,
+  eject,
+  init,
+  iproute2,
+  iputils-ping,
+  isc-dhcp-client,
+  kbd,
+  kmod,
+  less,
+  locales,
+  lsb-release,
+  mawk,
+  mount,
+  netbase,
+  netcat-openbsd,
+  netplan.io,
+  passwd,
+  procps,
+  python3,
+  sensible-utils,
+  sudo,
+  syslinux,
+  syslinux-common,
+  tzdata,
+  udev,
+  vim,
+  whiptail
+Recommends:
+  dhcpcd-base,
+  rsyslog,
+  usrmerge
+Description: Minimal core of Regolith Linux
+ This metapackage depends on all the packages in the Regolith minimal system.
+
+##shim-signed
+
+Package: regolith-standard
+Architecture: any
+Depends:
+  ${misc:Depends},
+  bind9-dnsutils,
+  busybox-static,
+  cpio,
+  cron,
+  curl,
+  dmidecode,
+  dosfstools,
+  ed,
+  file,
+  ftp,
+  hdparm,
+  info,
+  libpam-systemd,
+  logrotate,
+  lshw,
+  lsof,
+  man-db,
+  media-types,
+  nftables,
+  parted,
+  pciutils,
+  psmisc,
+  rsync,
+  strace,
+  time,
+  usbutils,
+  wget,
+  xz-utils
+Recommends:
+  apparmor,
+  bash-completion,
+  command-not-found,
+  cryptsetup,
+  iptables,
+  iputils-tracepath,
+  irqbalance,
+  jfsutils,
+  lvm2,
+  manpages,
+  mtr-tiny,
+  nano,
+  ntfs-3g,
+  openssh-client,
+  plymouth,
+  tcpdump,
+  telnet,
+  ufw,
+  uuid-runtime
+Description: CLI-only components of Regolith Linux
+ This metapackage depends on most of non-GUI packages from Regolith Linux.
+
+Package: regolith-desktop-common
+Architecture: any
+Depends:
+  ${misc:Depends},
+  acpid,
+  anacron,
+  at-spi2-core,
+  bc,
+  ca-certificates,
+  dmz-cursor-theme,
+  eog,
+  file-roller,
+  firefox,
+  fontconfig,
+  foomatic-db-compressed-ppds,
+  ghostscript,
+  gnome-font-viewer,
+  gnome-menus,
+  gnome-screenshot,
+  libnotify-bin,
+  libsasl2-modules,
+  lightdm,
+  lightdm-settings,
+  regolith-lightdm-config,
+  nautilus,
+  openprinting-ppds,
+  regolith-default-settings,
+  rfkill,
+  ssl-cert,
+  thermald,
+  unzip,
+  wpasupplicant,
+  xdg-user-dirs,
+  xdg-user-dirs-gtk,
+  xkb-data,
+  xcursor-themes,
+  xorg,
+  zip
+Recommends:
+  avahi-autoipd,
+  avahi-daemon,
+  bluez,
+  bluez-cups,
+  brltty,
+  cups,
+  cups-bsd,
+  cups-client,
+  cups-filters,
+  fwupd,
+  fwupd-signed,
+  geoclue-2.0,
+  gnome-power-manager,
+  gnome-session-bin,
+  heif-gdk-pixbuf,
+  heif-thumbnailer,
+  hplip,
+  htop,
+  ibus,
+  im-config,
+  laptop-detect,
+  libgail-common,
+  libnss-mdns,
+  libpam-gnome-keyring,
+  network-manager,
+  network-manager-pptp-gnome,
+  network-manager-openvpn,
+  network-manager-openvpn-gnome,
+  orca,
+  packagekit,
+  pcmciautils,
+  speech-dispatcher,
+  wamerican,
+  xdg-utils
+Description: Common desktop packages of Regolith Linux
+ This metapackage specifies the package from which the Regolith desktop
+ common packages can be installed. These packages will be good addition
+ to regolith-desktop variations (i3, or sway) and can be shared between
+ the two variations.
+
+Package: regolith-desktop-i3
+Architecture: any
+Depends:
+  ${misc:Depends},
+  regolith-session-flashback,
+  regolith-look-lascaille,
+  plymouth-theme-regolith-logo,
+  i3xrocks-app-launcher,
+  i3xrocks-battery,
+  i3xrocks-bluetooth,
+  i3xrocks-focused-window-name,
+  i3xrocks-info,
+  i3xrocks-memory,
+  i3xrocks-net-traffic,
+  i3xrocks-next-workspace,
+  i3xrocks-rofication,
+  i3xrocks-time,
+  i3xrocks-volume,
+Description: Complete Regolith Desktop (i3 and X11)
+ This metapackage installs the complete Regolith Linux desktop with i3 and X11.
+
+Package: regolith-desktop-sway
+Architecture: any
+Depends:
+  ${misc:Depends},
+  regolith-session-sway,
+  regolith-look-lascaille,
+  plymouth-theme-regolith-logo,
+Recommends:
+  regolith-sway-touchpad-gestures
+Description: Complete Regolith Desktop (Sway and Wayland)
+ This metapackage installs the complete Regolith Linux desktop with Sway and
+ Wayland.
+
+# Package: regolith-live
+# Architecture: any
+# Depends:
+#   ${shlibs:Depends},
+#   ${misc:Depends},
+#   libjsonrpc-glib-1.0-dev
+# Description: Regolith Linux Live Configurations
