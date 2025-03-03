@@ -7,12 +7,13 @@ Standards-Version: 4.1.2
 Homepage: https://github.com/regolith-linux/meta-packages
 Vcs-Git: https://github.com/regolith-linux/meta-packages.git
 
-#Package: regolith-branding
-#Architecture: any
-#Depends:
-#  ${misc:Depends},
-#Description: Regolith Linux branding materials
-# TODO.
+Package: regolith-branding
+Architecture: any
+Depends:
+  ${misc:Depends},
+  plymouth-theme-regolith-logo
+Description: Regolith Linux branding materials
+ TODO.
 
 Package: regolith-minimal
 Architecture: any
@@ -115,7 +116,7 @@ Recommends:
 Description: CLI-only components of Regolith Linux
  This metapackage depends on most of non-GUI packages from Regolith Linux.
 
-Package: regolith-desktop-common
+Package: regolith-common
 Architecture: any
 Depends:
   ${misc:Depends},
@@ -127,7 +128,7 @@ Depends:
   dmz-cursor-theme,
   eog,
   file-roller,
-  firefox,
+#  firefox,
   fontconfig,
   foomatic-db-compressed-ppds,
   ghostscript,
@@ -211,7 +212,7 @@ Depends:
   i3xrocks-next-workspace,
   i3xrocks-rofication,
   i3xrocks-time,
-  i3xrocks-volume,
+  i3xrocks-volume
 Description: Complete Regolith Desktop (i3 and X11)
  This metapackage installs the complete Regolith Linux desktop with i3 and X11.
 
@@ -221,17 +222,29 @@ Depends:
   ${misc:Depends},
   regolith-session-sway,
   regolith-look-lascaille,
-  plymouth-theme-regolith-logo,
+  plymouth-theme-regolith-logo
 Recommends:
   regolith-sway-touchpad-gestures
 Description: Complete Regolith Desktop (Sway and Wayland)
  This metapackage installs the complete Regolith Linux desktop with Sway and
  Wayland.
 
-# Package: regolith-live
-# Architecture: any
-# Depends:
-#   ${shlibs:Depends},
-#   ${misc:Depends},
-#   libjsonrpc-glib-1.0-dev
-# Description: Regolith Linux Live Configurations
+Package: regolith-live
+Architecture: any
+Depends:
+  ${misc:Depends},
+  apt-transport-https,
+  btrfs-progs,
+  cifs-utils,
+  discover,
+  mdadm,
+  fwupd,
+  gparted,
+  isolinux,
+  mokutil,
+  os-prober,
+  plymouth-theme-regolith-logo,
+  reiserfsprogs,
+  wamerican,
+  xfsprogs
+Description: Regolith Linux Live Configurations
