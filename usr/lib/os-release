@@ -8,6 +8,5 @@ ID_LIKE=debian
 HOME_URL="https://regolith-desktop.com/"
 SUPPORT_URL="https://github.com/orgs/regolith-linux/discussions"
 BUG_REPORT_URL="https://github.com/regolith-linux/regolith-desktop/issues"
-PRIVACY_POLICY_URL=""
 UBUNTU_CODENAME=noble
 LOGO=ubuntu-logo
