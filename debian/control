@@ -11,7 +11,8 @@ Package: regolith-branding
 Architecture: any
 Depends:
   ${misc:Depends},
-  plymouth-theme-regolith-logo
+  plymouth-theme-regolith-logo,
+  regolith-look-lascaille
 Description: Regolith Linux branding materials
  TODO.
 
@@ -200,8 +201,8 @@ Architecture: any
 Depends:
   ${misc:Depends},
   regolith-session-flashback,
-  regolith-look-lascaille,
-  plymouth-theme-regolith-logo,
+#  regolith-look-lascaille,
+#  plymouth-theme-regolith-logo,
   i3xrocks-app-launcher,
   i3xrocks-battery,
   i3xrocks-bluetooth,
@@ -220,9 +221,9 @@ Package: regolith-desktop-sway
 Architecture: any
 Depends:
   ${misc:Depends},
-  regolith-session-sway,
-  regolith-look-lascaille,
-  plymouth-theme-regolith-logo
+  regolith-session-sway
+#  regolith-look-lascaille
+#  plymouth-theme-regolith-logo
 Recommends:
   regolith-sway-touchpad-gestures
 Description: Complete Regolith Desktop (Sway and Wayland)
