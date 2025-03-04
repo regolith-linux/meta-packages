@@ -49,8 +49,6 @@ Depends:
   python3,
   sensible-utils,
   sudo,
-#  syslinux,
-#  syslinux-common,
   tzdata,
   udev,
   vim,
@@ -61,8 +59,6 @@ Recommends:
   usrmerge
 Description: Minimal core of Regolith Linux
  This metapackage depends on all the packages in the Regolith minimal system.
-
-##shim-signed
 
 Package: regolith-standard
 Architecture: any
@@ -131,7 +127,6 @@ Depends:
   dmz-cursor-theme,
   eog,
   file-roller,
-#  firefox,
   fontconfig,
   foomatic-db-compressed-ppds,
   ghostscript,
@@ -148,7 +143,6 @@ Depends:
   regolith-default-settings,
   rfkill,
   ssl-cert,
-#  thermald,
   unzip,
   wpasupplicant,
   xdg-user-dirs,
@@ -203,8 +197,6 @@ Architecture: any
 Depends:
   ${misc:Depends},
   regolith-session-flashback,
-#  regolith-look-lascaille,
-#  plymouth-theme-regolith-logo,
   i3xrocks-app-launcher,
   i3xrocks-battery,
   i3xrocks-bluetooth,
@@ -224,8 +216,6 @@ Architecture: any
 Depends:
   ${misc:Depends},
   regolith-session-sway
-#  regolith-look-lascaille
-#  plymouth-theme-regolith-logo
 Recommends:
   regolith-sway-touchpad-gestures
 Description: Complete Regolith Desktop (Sway and Wayland)

@@ -1,0 +1,13 @@
+PRETTY_NAME="Regolith 3.3"
+NAME="Regolith"
+VERSION_ID="3.3"
+VERSION="3.3"
+VERSION_CODENAME=noble
+ID=regolith
+ID_LIKE=debian
+HOME_URL="https://regolith-desktop.com/"
+SUPPORT_URL="https://github.com/orgs/regolith-linux/discussions"
+BUG_REPORT_URL="https://github.com/regolith-linux/regolith-desktop/issues"
+PRIVACY_POLICY_URL=""
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
