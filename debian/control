@@ -13,6 +13,8 @@ Depends:
   ${misc:Depends},
   plymouth-theme-regolith-logo,
   regolith-look-lascaille
+Replaces:
+  ubuntu-wallpapers
 Description: Regolith Linux branding materials
  TODO.
 
