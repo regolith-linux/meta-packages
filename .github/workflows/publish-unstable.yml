@@ -19,16 +19,33 @@ jobs:
       includes: ${{ steps.builder.outputs.includes }}
       runners: ${{ steps.builder.outputs.runners }}
     steps:
+      # - name: Build Matrix
+      #   id: builder
+      #   uses: regolith-linux/actions/build-matrix@main
+      #   env:
+      #     VOULAGE_REF: "meta-packages"
+      #   with:
+      #     name: "${{ github.event.repository.name }}"
+      #     ref: "main"
+      #     arch: "amd64 arm64"
+      #     stage: "unstable"
       - name: Build Matrix
         id: builder
-        uses: regolith-linux/actions/build-matrix@main
-        env:
-          VOULAGE_REF: "meta-packages"
-        with:
-          name: "${{ github.event.repository.name }}"
-          ref: "main"
-          arch: "amd64 arm64"
-          stage: "unstable"
+        run: |
+          INCLUDES=()
+
+          for codename in focal jammy lunar mantic noble oracular; do          
+            INCLUDES+=("$(jq -n -c --arg distro "ubuntu" --arg codename "$codename" --arg arch "amd64" '$ARGS.named')")
+            INCLUDES+=("$(jq -n -c --arg distro "ubuntu" --arg codename "$codename" --arg arch "arm64" '$ARGS.named')")
+          done
+
+          for codename in bullseye bookworm; do          
+            INCLUDES+=("$(jq -n -c --arg distro "debian" --arg codename "$codename" --arg arch "amd64" '$ARGS.named')")
+            INCLUDES+=("$(jq -n -c --arg distro "debian" --arg codename "$codename" --arg arch "arm64" '$ARGS.named')")
+          done
+
+          echo "includes=$(jq -n -c "[$(printf '%s\n' "${INCLUDES[@]}" | paste -sd,)]" '$ARGS.named')" >> $GITHUB_OUTPUT
+          echo "runners=$(jq -n -c "$(jq -n -c --arg amd64 "ubuntu-24.04" --arg arm64 "ubuntu-24.04-arm" '$ARGS.named')" '$ARGS.named')" >> $GITHUB_OUTPUT
 
   build:
     runs-on: ${{ fromJSON(needs.matrix-builder.outputs.runners)[matrix.arch] }}
