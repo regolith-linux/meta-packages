@@ -34,7 +34,7 @@ jobs:
         run: |
           INCLUDES=()
 
-          for codename in focal jammy lunar mantic noble oracular; do          
+          for codename in focal jammy lunar mantic noble oracular plucky; do          
             INCLUDES+=("$(jq -n -c --arg distro "ubuntu" --arg codename "$codename" --arg arch "amd64" '$ARGS.named')")
             INCLUDES+=("$(jq -n -c --arg distro "ubuntu" --arg codename "$codename" --arg arch "arm64" '$ARGS.named')")
           done
